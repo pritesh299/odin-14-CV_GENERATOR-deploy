@@ -1,7 +1,6 @@
 // components/Education.jsx
 import { Preform, ExperienceForm, EducationForm } from "./Forms.jsx"; // Fix the typo in the import statement
-import CIcon from '@coreui/icons-react';
-import { cilArrowBottom, cilArrowTop } from '@coreui/icons';
+import 'primeicons/primeicons.css';
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
@@ -32,11 +31,11 @@ function ProfessionalDetails({ ExperienceList, setEducationList, setExperienceLi
       }]);
     } else if (e.target.id === "saveExperience") {
       setExperienceList((prevExperienceList) => [...prevExperienceList, {
-        companyName: document.getElementById("experienceCompanyName").value,
-        positionTitle: document.getElementById("experiencePositionTitle").value,
-        endDate: document.getElementById("experienceEndDate").value,
-        startDate: document.getElementById("experienceStartDate").value,
-        description: document.getElementById("experienceDescription").value,
+        companyName: document.getElementById("ExperienceCompanyName").value,
+        positionTitle: document.getElementById("ExperiencePositionTitle").value,
+        endDate: document.getElementById("ExperienceEndDate").value,
+        startDate: document.getElementById("ExperienceStartDate").value,
+        description: document.getElementById("ExperienceDescription").value,
         id: uuid(),
         visibility: true,
       }]);
@@ -94,18 +93,14 @@ function ProfessionalDetails({ ExperienceList, setEducationList, setExperienceLi
   return (
     <>
       <div id="Education">
-        <div id="education_head">
+        <div id="Education_head">
           <h2>Education</h2>
           <button
             className="head_button"
             style={{ backgroundColor: 'white' }}
             onClick={() => toggleIndex(1)}
           >
-            <CIcon
-              className="text-primary"
-              icon={activeIndex === 1 ? cilArrowTop : cilArrowBottom}
-              size="sm"
-            />
+            <i className={activeIndex === 1 ?  "pi pi-angle-up" : " pi pi-angle-down"}></i>
           </button>
         </div>
 
@@ -116,31 +111,30 @@ function ProfessionalDetails({ ExperienceList, setEducationList, setExperienceLi
             ) : (
               <>
                 {RenderList(1)}
-                <button
+
+                <div id="Education_button"><button
                   style={{ backgroundColor: 'white' }}
                   onClick={() => toggleForm()}
                 >
                   Add Education
                 </button>
+                </div>
               </>
             )}
           </>
         )}
       </div>
 
-      <div id="experience">
-        <div id="experience_head">
+      <div id="Experience">
+        <div id="Experience_head">
           <h2>Experiences</h2>
           <button
             className="head_button"
             style={{ backgroundColor: 'white' }}
             onClick={() => toggleIndex(2)}
           >
-            <CIcon
-              className="text-primary"
-              icon={activeIndex === 2 ? cilArrowTop : cilArrowBottom}
-              size="sm"
-            />
+              <i className={activeIndex === 2?  "pi pi-angle-up" : " pi pi-angle-down"}></i>
+
           </button>
         </div>
 
@@ -151,12 +145,15 @@ function ProfessionalDetails({ ExperienceList, setEducationList, setExperienceLi
             ) : (
               <>
                 {RenderList(2)}
+
+                <div id="Experience_button">
                 <button
                   style={{ backgroundColor: 'white' }}
                   onClick={() => toggleForm()}
                 >
                   Add Experience
                 </button>
+                </div>
               </>
             )}
           </>

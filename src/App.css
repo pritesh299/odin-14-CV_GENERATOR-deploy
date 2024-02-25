@@ -1,319 +1,131 @@
 body {
-  background-color: #f0f5f5; /* Light Aqua */
-  color: #333; /* Dark Gray */
   margin: 0;
-  font-family: 'Arial', sans-serif;
 }
 
 div#root {
-  background-color: #f0f5f5;
-  color: black;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  padding: 20px;
-  gap: 20px;
-  --font-family: 'Arial, sans-serif';
-  --font-bold: 'Arial, sans-serif';
-  --section-background: #f0f0f0;
-  --accent-color: #333;
+  background: #F3EFF3;
+  display: flex;
+  flex-direction: row;
+  gap: 6vw;
+  padding: 4vw;
 }
 
+button {
+  background: transparent;
+  border: none;
+}
 
-
-div#optionCard,
-div#PersonalDetailsCard {
+div#Sidebar {
   display: flex;
   flex-direction: column;
-  background-color: white;
-    padding: 10px;
+  width: 30vw;
 }
 
+div#resume {
+  width: 50vw;
+}
 
 div#optionCard {
-  border-bottom: 10px solid #f0f5f5;
-  background-color: white;
-  padding: 10px;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 17px;
+  
 }
 
 div#PersonalDetailsCard {
-  align-items: baseline;
-  background-color: white;
-  border-bottom: 10px solid #f0f5f5;
+  background: white;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
+  border-radius: 17px;
+  margin: 20px 0px;
+  text-align: center;
+  
 }
 
 form {
   display: flex;
   flex-direction: column;
+  gap: 30px;
+  align-items: baseline;
 }
 
-input[type=text] {
-  width: 100%;
-  padding: 5px;
-  margin: 8px 0;
-  border-radius: 5px;
-  border: none;
-  height: 20px;
-  background-color: #f0f0f0;
-  color: black;
-}
-
-button {
-  color: black;
-  font-size: 12px;
-  background-color: initial;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease-in-out;
-}
-
-.resume-container {
-  margin: 20px;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.1), 0 8px 16px -8px rgba(0, 0, 0, 0.25);
-}
-
-.resume {
-  background-color: white;
-  position: sticky;
-  top: 0;
-  font-family: var(--font-family);
-  display: grid;
-  grid-template-rows: auto 1fr;
-  width: 100%;
-  height: 100%;
-}
-
-button.head_button {
-  border-radius: 50000px;
-  width: 57px;
-  height: 57px;
-}
-
-.resume.left,
-.resume.right {
-  display: grid;
-  grid-template-columns: 44% 56%;
-}
-
-.resume.right > :first-child {
-  grid-column: 2 / span 1;
-}
-
-.resume.right > :last-child {
-  grid-column: 1 / span 1;
-}
-
-.resume-section {
-  padding: 0 56px;
-  margin-top: 40px;
-}
-
-.button {
-  cursor: pointer;
-}
-
-.resume h1,
-.resume h2,
-.resume h3 {
-  font-family: var(--font-bold);
+label {
+  font-size: 20px;
   font-weight: bold;
 }
 
-.header-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 13px;
+div#Experience {
+  background: white;
+  border-radius: 17px;
+  margin: 20px 0px;
   text-align: center;
-  border-radius: 2px;
-  padding: 4px 0;
-  background-color: var(--section-background);
-  color: var(--accent-color);
+  
 }
 
-#education_head,
-#experience_head {
+div#Education {
+  background: white;
+  border-radius: 17px;
+  margin: 20px 0px;
+  text-align: center;
+  
+}
+
+#Education_head,
+#Experience_head {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0 20px;
+  align-items: center;
 }
 
-#Education,#experience{
-  background-color: white;
-  border-bottom: 10px solid #f0f5f5;
-  display: flex;
-  flex-direction: column;
+.head_button {
+  border-radius: 100000px;
+  height: 2%;
+  width: 10%;
+  border: none;
 }
-
 
 .preform {
-    border-bottom: 4px solid #f0f5f5;
-    padding: 10px 20px;
-    BORDER-TOP: 4px solid #f0f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.icon {
-  height: 20px;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.experience-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
-.input-group {
-  margin-bottom: 15px;
-}
-
-.label-text {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.optional-text {
-  font-size: 12px;
-  color: #888;
-  margin-left: 5px;
-}
-
-input[type="text"],
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.dates-group {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
+  border-top: 6px solid #F3EFF3;
   align-items: center;
-  margin-top: 20px;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.delete {
-  color: #fff;
-  background-color: #d9534f;
-  border: none;
-  padding: 8px 15px;
-  border-radius: 4px;
-  cursor: pointer;
+div#Education_button, #Experience_button {
+  padding: 20px;
+  border-top: 6px solid #F3EFF3;
 }
 
-.main-buttons button {
-  padding: 8px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+form#EducationForm,
+form#ExperienceForm {
+  border-top: 8px solid #F3EFF3;
+  padding: 20px;
 }
 
-.cancel {
-  background-color: #5bc0de;
-  margin-right: 10px;
-}
-
-.save {
-  background-color: #5cb85c;
-  color: #fff;
-}
-
-/* Optional: Add styles for font-awesome icons */
-.fa-trash {
-  margin-right: 5px;
-}
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+#EducationForm_buttonContainer,
+#ExperienceForm_buttonContainer {
+  border-top: 8px solid #F3EFF3;
+  padding: 20px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  gap: 40px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#Education_button > button ,#Experience_button > button , div#EducationForm_buttonContainer > button{
+  border: 4px solid #F3EFF3;
+  border-radius: 50px;
+  padding: 10px;
+}
+.preform_buttonContainer {
+  display: flex;
+  gap: 10px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: white;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.preform > button {
+  background: transparent;
 }
