@@ -6,13 +6,14 @@ function RenderExperience({ExperienceList}) {
     {ExperienceList.map(item=>(
     (item.visibility)?
     (<div className="experience-info">
-    <div className="experience-info-group">
+    <div className="experience-info-group1">
       <p className="dates">{item.startDate} - {item.endDate}</p>
-      <p>{item.location}</p>
-    </div>
-    <div className="experience-info-group">
+      <p className='location'>{item.location}</p>
       <p className="experience-info-companyName">{item.companyName}</p>
       <p className="experience-info-positionTitle">{item.positionTitle}</p>
+    </div>
+    <div className="experience-info-group2">
+     
       <p className="experience-info-description">{item.description}</p>
     </div>
     </div>):(<></>)
@@ -29,9 +30,11 @@ function RenderEducation({ EducationList }) {
       {EducationList.map(item=>(
        (item.visibility)?(
        <div className="education-info">
-       <div  className="education-info-group">
+       <div  className="education-info-group1">
        <p className="dates">{item.startDate} - {item.endDate}</p>
-       <p>{item.location}</p>
+       <p className='location'>{item.location}</p>
+       </div>
+       <div  className="education-info-group2">
        <p className="education-info-schoolName">{item.schoolName}</p>
        <p className="education-info-degree">{item.degree}</p>
        </div>

@@ -1,7 +1,9 @@
+/* Reset default browser margin */
 body {
   margin: 0;
 }
 
+/* Main container for the application */
 div#root {
   background: #F3EFF3;
   display: flex;
@@ -10,30 +12,34 @@ div#root {
   padding: 4vw;
 }
 
+/* Reset button styles */
 button {
   background: transparent;
   border: none;
 }
 
+/* Sidebar container */
 div#Sidebar {
   display: flex;
   flex-direction: column;
   width: 30vw;
 }
 
+/* Main resume container */
 div#resume {
   width: 50vw;
 }
 
+/* Style for option card */
 div#optionCard {
   background: white;
   display: flex;
   justify-content: space-around;
   padding: 20px;
   border-radius: 17px;
-  
 }
 
+/* Style for personal details card */
 div#PersonalDetailsCard {
   background: white;
   display: flex;
@@ -42,9 +48,9 @@ div#PersonalDetailsCard {
   border-radius: 17px;
   margin: 20px 0px;
   text-align: center;
-  
 }
 
+/* Form container */
 form {
   display: flex;
   flex-direction: column;
@@ -52,27 +58,29 @@ form {
   align-items: baseline;
 }
 
+/* Label styles */
 label {
   font-size: 20px;
   font-weight: bold;
 }
 
+/* Experience section container */
 div#Experience {
   background: white;
   border-radius: 17px;
   margin: 20px 0px;
   text-align: center;
-  
 }
 
+/* Education section container */
 div#Education {
   background: white;
   border-radius: 17px;
   margin: 20px 0px;
   text-align: center;
-  
 }
 
+/* Styles for section headers */
 #Education_head,
 #Experience_head {
   display: flex;
@@ -81,6 +89,7 @@ div#Education {
   align-items: center;
 }
 
+/* Styles for buttons within headers */
 .head_button {
   border-radius: 100000px;
   height: 2%;
@@ -88,6 +97,7 @@ div#Education {
   border: none;
 }
 
+/* Styles for preform (preview form) */
 .preform {
   display: flex;
   border-top: 6px solid #F3EFF3;
@@ -96,17 +106,14 @@ div#Education {
   padding: 0 20px;
 }
 
-div#Education_button, #Experience_button {
+/* Styles for Education and Experience buttons */
+div#Education_button,
+#Experience_button {
   padding: 20px;
   border-top: 6px solid #F3EFF3;
 }
 
-form#EducationForm,
-form#ExperienceForm {
-  border-top: 8px solid #F3EFF3;
-  padding: 20px;
-}
-
+/* Styles for button containers within forms */
 #EducationForm_buttonContainer,
 #ExperienceForm_buttonContainer {
   border-top: 8px solid #F3EFF3;
@@ -116,16 +123,227 @@ form#ExperienceForm {
   gap: 40px;
 }
 
-#Education_button > button ,#Experience_button > button , div#EducationForm_buttonContainer > button{
+/* Styles for buttons within Education and Experience sections */
+#Education_button > button,
+#Experience_button > button,
+div#EducationForm_buttonContainer > button,
+div#ExperienceForm_buttonContainer > button {
   border: 4px solid #F3EFF3;
   border-radius: 50px;
   padding: 10px;
 }
+
+/* Styles for preform button container */
 .preform_buttonContainer {
   display: flex;
   gap: 10px;
 }
 
-.preform > button {
-  background: transparent;
+/* Reset label text alignment */
+label {
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Styles for form elements */
+#PersonalDetailsForm,
+#EducationForm,
+#ExperienceForm {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Additional styles for Education and Experience forms */
+#EducationForm,
+#ExperienceForm {
+  border-top: 8px solid #F3EFF3;
+}
+
+/* Title styles */
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+/* Subtitle styles */
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Styles for input container */
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+/* Additional styles for input container */
+.input-container  {
+  margin-top: 30px;
+}
+
+/* Styles for input fields */
+.input {
+  background-color: #F3EFF3;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #000000;
+  font-size: 16px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+/* Styles for input underline */
+.cut {
+  background-color: transparent;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 106px;
+}
+
+/* Input focus styles */
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+  background-color: #08d;
+}
+
+/* Placeholder styles */
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+/* Placeholder focus styles */
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+/* Placeholder color when input is not empty */
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #2708A0;
+}
+
+/* Placeholder color when input is focused */
+.input:focus ~ .placeholder {
+  color: white;
+}
+
+/* Hide date input spinner */
+input[type='date']:in-range::-webkit-datetime-edit-year-field,
+input[type='date']:in-range::-webkit-datetime-edit-month-field,
+input[type='date']:in-range::-webkit-datetime-edit-day-field,
+input[type='date']:in-range::-webkit-datetime-edit-text {
+  color: transparent;
+}
+
+/* Submit button styles */
+.submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Submit button active styles */
+.submit:active {
+  background-color: #06b;
+}
+
+
+
+.resume.top {
+  background: green;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-columns: 50% 50%;
+}
+
+h1.resume-name {
+  font-size: 36px;
+}
+
+div#ResumeInfo {
+  padding: 20px;
+  background-color: white;
+}
+
+h3.header-text {
+  text-align: center;
+  background: aliceblue;
+}
+
+.education-info {
+  padding: 0 20px;
+  display: flex;
+  
+}
+
+.experience-info-group1 {  
+  display: flex;
+}
+
+.experience-info {
+  padding: 20px;
+}
+
+.experience-info-group1 {
+  display: grid;
+  grid-template:
+  "date     title"
+  "location  job ";
+  }
+
+
+  p.dates {
+    grid-area: "date";
+}
+
+p.location {
+  grid-area: "location";
+}
+
+p.experience-info-companyName {
+  grid-area: "title";
+}
+
+p.experience-info-positionTitle {
+  grid-area: "job";
 }

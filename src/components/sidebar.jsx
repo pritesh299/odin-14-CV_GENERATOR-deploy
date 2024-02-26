@@ -163,16 +163,6 @@ function ProfessionalDetails({ ExperienceList, setEducationList, setExperienceLi
   );
 }
 
-function Options() {
-  return (
-    <>
-      <div id="optionCard">
-        <button style={{ backgroundColor: 'red' }}>Clear</button>
-        <button style={{ backgroundColor: 'white' }}>Load Example</button>
-      </div>
-    </>
-  );
-}
 
 // components/PersonalDetails.jsx
 function PersonalDetails({ personalInfo, setPersonalInfo }) {
@@ -190,12 +180,29 @@ function PersonalDetails({ personalInfo, setPersonalInfo }) {
   return (
     <div id="PersonalDetailsCard">
       <h2>Personal Details</h2>
-      <form>
-        <label htmlFor="fullName">Full Name: <input onChange={changeDetails} id="fullName" type="text" value={personalInfo.name} /></label>
-        <label htmlFor="email">Email: <input onChange={changeDetails} id="email" type="text" value={personalInfo.email} /></label>
-        <label htmlFor="phoneNumber">Phone number: <input onChange={changeDetails} id="phoneNumber" type="text" value={personalInfo.phoneNumber} /></label>
-        <label htmlFor="address">Address: <input onChange={changeDetails} id="address" type="text" value={personalInfo.address} /></label>
-      </form>
+
+      <form id="PersonalDetailsForm">
+<div class="input-container ">
+  <input onChange={changeDetails} id="fullName" type="text" class="input" value={personalInfo.name} placeholder=" " />
+  <div class="cut"></div>
+  <label for="fullName" class="placeholder">Full Name</label>
+</div>
+<div class="input-container ">
+  <input onChange={changeDetails} id="email" type="text" class="input" value={personalInfo.email} placeholder=" " />
+  <div class="cut"></div>
+  <label for="email" class="placeholder">Email</label>
+</div>
+<div class="input-container ">
+  <input onChange={changeDetails} id="phoneNumber" type="text" class="input" value={personalInfo.phoneNumber} placeholder=" " />
+  <div class="cut cut-short"></div>
+  <label for="phoneNumber" class="placeholder">Phone number</label>
+</div>
+<div class="input-container ">
+  <input onChange={changeDetails} id="address" type="text" class="input" value={personalInfo.address} placeholder=" " />
+  <div class="cut cut-short"></div>
+  <label for="address" class="placeholder">Address </label>
+</div>
+</form>
     </div>
   );
 }
@@ -205,6 +212,6 @@ export default PersonalDetails;
 
 export {
   PersonalDetails,
-  Options,
   ProfessionalDetails
 };
+

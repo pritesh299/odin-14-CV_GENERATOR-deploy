@@ -1,6 +1,6 @@
 
 import './App.css'
-import {Options,PersonalDetails, ProfessionalDetails} from "./components/sidebar.jsx"
+import {PersonalDetails, ProfessionalDetails} from "./components/sidebar.jsx"
 import { ResumeTop,ResumeInfo } from './components/Resume.jsx'
 import {useState} from "react"
  
@@ -34,7 +34,6 @@ function App() {
    return (
     <>
      <div id="Sidebar">
-      <Options/>
       <PersonalDetails personalInfo={personalInfo} setPersonalInfo={setPersonalInfo}/>
       <ProfessionalDetails EducationList={EducationList} ExperienceList={ExperienceList} setEducationList={setEducationList} setExperienceList={setExperienceList}/> 
 
