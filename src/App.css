@@ -373,3 +373,20 @@ p.education-info-schoolName{
 p.education-info-degree{
   grid-area: degree;
 }
+
+
+@media only screen and (max-width: 600px) {
+  div#root{
+    flex-direction: column;
+  }
+    
+  div#resume { 
+    width: 95vw;
+    transform: scale(0.6);
+
+  }
+  
+  div#Sidebar {
+    width: 90vw;
+  }
+}
