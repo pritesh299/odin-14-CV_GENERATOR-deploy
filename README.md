@@ -1,7 +1,8 @@
 ### Project Name: Resume Builder
- visit: resume-builder-299.netlify.app
----
 
+---
+ visit: (https://resume-builder-299.netlify.app/)
+ 
 ### Description:
 This project is a simple web application for creating and managing resumes. Users can input personal details, educational qualifications, and professional experiences to generate a formatted resume.
 
@@ -11,7 +12,7 @@ This project is a simple web application for creating and managing resumes. User
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/pritesh299/odin-14-CV_GENERATOR-deploy.git
    ```
 
 2. Install dependencies:
