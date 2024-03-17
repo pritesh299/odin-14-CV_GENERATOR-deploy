@@ -8,7 +8,7 @@ import {useState} from "react"
 
 function App() {
 
-   const[personalInfo,setPersonalInfo]=useState({name:"Pritesh",email:"Jogdhankar",address:"Bangalore",phoneNumber:"56891164485"})  
+   const[personalInfo,setPersonalInfo]=useState({name:"Pritesh jogdhankar",email:"priteshr@iisc.ac.in",address:"Bangalore",phoneNumber:"56891164485"})  
    const [EducationList,setEducationList]=useState([
     {
       startDate: "08/2020",
@@ -16,7 +16,7 @@ function App() {
       location: "New York City, US",
       schoolName: "London City University",
       degree: "Bachelors in Economics",
-      visibilty:true
+      visibility:true
     },
     
    ])
@@ -27,7 +27,7 @@ function App() {
     companyName: "Umbrella Inc.",
     positionTitle: "UX & UI Designer",
     description: "Designed and prototyped user interface patterns for various clients in various industries, ranging from self-service apps within the telecommunications-sector to mobile games for IOS and Android",
-    visibilty:true
+    visibility:true
 
   },])
 

@@ -31,11 +31,11 @@ function ProfessionalDetails({ ExperienceList, setEducationList, setExperienceLi
       }]);
     } else if (e.target.id === "saveExperience") {
       setExperienceList((prevExperienceList) => [...prevExperienceList, {
-        companyName: document.getElementById("ExperienceCompanyName").value,
-        positionTitle: document.getElementById("ExperiencePositionTitle").value,
-        endDate: document.getElementById("ExperienceEndDate").value,
-        startDate: document.getElementById("ExperienceStartDate").value,
-        description: document.getElementById("ExperienceDescription").value,
+        companyName: document.getElementById("experienceCompanyName").value,
+        positionTitle: document.getElementById("experiencePositionTitle").value,
+        endDate: document.getElementById("experienceEndDate").value,
+        startDate: document.getElementById("experienceStartDate").value,
+        description: document.getElementById("experienceDescription").value,
         id: uuid(),
         visibility: true,
       }]);

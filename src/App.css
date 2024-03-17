@@ -284,16 +284,23 @@ input[type='date']:in-range::-webkit-datetime-edit-text {
 
 
 .resume.top {
-  background: green;
+  background: #1F487E;
   padding: 20px;
   text-align: center;
+  color: white;
 }
 
 .contact-info {
-  display: grid;
+   display:flex;
+  justify-content: space-around;
   align-items: center;
-  grid-template-columns: 50% 50%;
-  grid-template-columns: 50% 50%;
+  padding: 10px 0;
+  font-weight: 500;
+
+}
+
+.pi{
+  margin: 5px;
 }
 
 h1.resume-name {
@@ -308,12 +315,12 @@ div#ResumeInfo {
 h3.header-text {
   text-align: center;
   background: aliceblue;
+  padding: 10px;
 }
 
 .education-info {
   padding: 0 20px;
   display: flex;
-  
 }
 
 .experience-info-group1 {  
@@ -330,9 +337,11 @@ h3.header-text {
   "date     title"
   "location  job ";
   }
-
-
-  p.dates {
+  .experience-info-group2{
+    border-top: 2px dotted black;
+    border-bottom: 2px dotted black;
+  }
+p.dates {
     grid-area: "date";
 }
 
@@ -346,4 +355,21 @@ p.experience-info-companyName {
 
 p.experience-info-positionTitle {
   grid-area: "job";
+}
+
+.education-info-group{
+  display: grid;
+  grid-template:
+  "date     name"
+  "location  degree ";
+  width: 100%;
+  
+}
+
+p.education-info-schoolName{
+  grid-area: name;
+}
+
+p.education-info-degree{
+  grid-area: degree;
 }

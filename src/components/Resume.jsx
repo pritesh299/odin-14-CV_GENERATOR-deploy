@@ -13,7 +13,6 @@ function RenderExperience({ExperienceList}) {
       <p className="experience-info-positionTitle">{item.positionTitle}</p>
     </div>
     <div className="experience-info-group2">
-     
       <p className="experience-info-description">{item.description}</p>
     </div>
     </div>):(<></>)
@@ -30,11 +29,9 @@ function RenderEducation({ EducationList }) {
       {EducationList.map(item=>(
        (item.visibility)?(
        <div className="education-info">
-       <div  className="education-info-group1">
+       <div  className="education-info-group">
        <p className="dates">{item.startDate} - {item.endDate}</p>
        <p className='location'>{item.location}</p>
-       </div>
-       <div  className="education-info-group2">
        <p className="education-info-schoolName">{item.schoolName}</p>
        <p className="education-info-degree">{item.degree}</p>
        </div>
@@ -78,16 +75,17 @@ function ResumeTop({ personalInfo }) {
       <div className="personal-info">
         <h1 className="resume-name">{personalInfo.name}</h1>
         <div className="contact-info">
-          <div><i className="fa-solid fa-envelope"></i><span>{personalInfo.email}</span></div>
-          <div><i className="fa-solid fa-phone"></i><span>{personalInfo.phoneNumber}</span></div>
-          <div><i className="fa-solid fa-location-dot"></i><span>{personalInfo.address}</span></div>
+          <div><i className="pi pi-envelope"></i><span>{personalInfo.email}</span></div>
+          <div><i className="pi pi-phone"></i><span>{personalInfo.phoneNumber}</span></div>
+          <div><i className="pi pi-home"></i><span>{personalInfo.address}</span></div>
         </div>
       </div>
     </div>
   );
 }
-
 export {
   ResumeInfo,
   ResumeTop
 };
+
+
