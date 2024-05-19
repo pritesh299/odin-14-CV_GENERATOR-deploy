@@ -8,7 +8,12 @@ import {useState} from "react"
 
 function App() {
 
-   const[personalInfo,setPersonalInfo]=useState({name:"Pritesh jogdhankar",email:"priteshr@iisc.ac.in",address:"Bangalore",phoneNumber:"56891164485"})  
+  const [personalInfo, setPersonalInfo] = useState({
+    name: "John Doe",
+    email: "johndoe@example.com",
+    address: "123 Elm Street, Springfield",
+    phoneNumber: "123-456-7890"
+  });
    const [EducationList,setEducationList]=useState([
     {
       startDate: "08/2020",
